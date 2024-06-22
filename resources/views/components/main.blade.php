@@ -16,7 +16,7 @@
 
     <!-- itme link  -->
     <div class=" text-muted m-2 p-3 bg-body rounded shadow-sm">
-        <a href="./cilents.html" class="d-flex text-decoration-none">
+        <a href="{{route('clients.list')}}" class="d-flex text-decoration-none">
             <div class="pr-3">
                 <img src="{{asset('assets/img/icon/avatar-design.png')}}" alt="">
             </div>
@@ -76,7 +76,7 @@
 
     <!-- itme link  -->
     <div class=" text-muted m-2 p-3 bg-body rounded shadow-sm">
-        <a href="./users.html" class="d-flex text-decoration-none">
+        <a href="{{route('clients.create')}}" class="d-flex text-decoration-none">
             <div class="pr-3">
                 <img src="{{asset('assets/img/icon/settings.png')}}" alt="">
             </div>
@@ -91,7 +91,7 @@
 
     <!-- itme link  -->
     <div class=" text-muted m-2 p-3 bg-body rounded shadow-sm">
-        <a href="./sementa.html" class="d-flex text-decoration-none">
+        <a href="{{route('cements.create')}}" class="d-flex text-decoration-none">
             <div class="pr-3">
                 <img src="{{asset('assets/img/icon/settings.png')}}" alt="">
             </div>

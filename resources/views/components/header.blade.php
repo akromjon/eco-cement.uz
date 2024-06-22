@@ -3,7 +3,7 @@
         <img class="logo" src="{{asset('assets/img/logo/logo1.png')}}" alt="">
     </a>
     <div class="text-block-t w-50 text-center">
-        Bosh Sahifa
+        @yield("title")
     </div>
     <div class="w-25  text-end">
         <a href="/logout">
