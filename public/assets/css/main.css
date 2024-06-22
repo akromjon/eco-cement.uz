@@ -1,0 +1,164 @@
+.my-login {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   position: fixed;
+   width: 100%;
+}
+.my-login form {
+   width: 300px;
+}
+.w-40 {
+   width: 40px;
+   margin-right: 20px;
+}
+.logo {
+   width: 100px;
+   margin-left: 1rem;
+}
+.text-block-t {
+   font-size: 1.5rem;
+   font-weight: 600;
+   text-transform: uppercase;
+}
+.text-menu {
+   text-decoration: none;
+   padding-top: 10px;
+   font-size: 1.5rem;
+   font-weight: 600;
+   text-transform: uppercase;
+}
+.bc-yw {
+   color: #ffc62a;
+   font-size: 18px !important;
+   font-weight: 600;
+}
+.block-add-btn {
+   position: fixed;
+   z-index: 9;
+   bottom: 30px;
+   right: 30px;
+}
+.mb-100 {
+   margin-bottom: 100px;
+}
+.minus {
+   color: red;
+   font-weight: 700;
+}
+.name-cilent {
+   color: #000;
+}
+.list-product {
+}
+.list-product-left {
+   width: 20%;
+}
+.list-product-center {
+   width: 30%;
+}
+.list-product-right {
+   width: 50%;
+   color: #000;
+}
+.my-tabs li {
+   width: 50%;
+}
+.my-tabs li button {
+   width: 100%;
+}
+.my-tabs li button.active {
+   background-color: inherit !important;
+   border-bottom: 2px solid;
+   border-radius: 0;
+}
+.sana {
+   font-size: 16px;
+   color: rgb(163, 163, 163);
+}
+.marka {
+   font-size: 16px;
+   color: rgb(163, 163, 163);
+}
+.car {
+   font-size: 18px;
+   color: rgb(0, 0, 0);
+}
+.red {
+   color: rgb(25, 0, 255) !important;
+   font-weight: 700;
+}
+.name-cilent {
+   font-size: 18px;
+   color: rgb(0, 0, 0);
+   font-weight: 700;
+}
+.s-k-style {
+   margin-left: 5px;
+   color: rgb(163, 163, 163);
+   font-weight: 700;
+}
+.sum {
+   font-size: 24px;
+   color: rgb(0, 0, 0);
+   font-weight: 700;
+}
+.summa {
+   font-size: 24px;
+   color: rgb(0, 0, 0);
+   font-weight: 700;
+}
+@media only screen and (max-width: 600px) {
+   .logo {
+      width: 60px;
+   }
+   .block-add-btn {
+      width: 100%;
+      padding: 20px;
+      bottom: 0px;
+      right: 0px;
+   }
+   .font-14 {
+      font-size: 16px;
+   }
+   .sana {
+      font-size: 12px;
+      color: rgb(163, 163, 163);
+   }
+   .marka {
+      font-size: 12px;
+      color: rgb(163, 163, 163);
+   }
+   .car {
+      font-size: 14px;
+      color: rgb(0, 0, 0);
+   }
+   .name-cilent {
+      font-size: 14px;
+      color: rgb(0, 0, 0);
+      font-weight: 700;
+   }
+   .kg {
+      font-size: 14px;
+      color: rgb(0, 0, 0);
+      font-weight: 700;
+   }
+   .sum {
+      font-size: 14px;
+      color: rgb(0, 0, 0);
+      font-weight: 700;
+   }
+   .summa {
+      font-size: 18px;
+      color: rgb(0, 0, 0);
+      font-weight: 700;
+   }
+   .mini-btn {
+      font-weight: 600;
+      padding: 0px 13px;
+   }
+   .m-font {
+      font-size: 12px;
+   }
+}
