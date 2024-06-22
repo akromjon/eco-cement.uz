@@ -4,7 +4,9 @@
         @include('components.head')
     </head>
     <body class="bg-light">
-        @include('components.header')
+        @if(!(request()->route()->getName()==='login'))
+            @include('components.header')
+        @endif
         @yield('content')
         @include('components.script')
     </body>

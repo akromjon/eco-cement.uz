@@ -1,1 +1,1 @@
-<script src="./js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="{{asset('assets/js/bootstrap.bundle.min.js')}}" crossorigin="anonymous"></script>

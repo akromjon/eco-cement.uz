@@ -3,7 +3,7 @@
     <div class=" text-muted m-2 p-3 bg-body rounded shadow-sm">
         <a href="./sale.html" class="d-flex text-decoration-none">
             <div class="pr-3">
-                <img src="./img/icon/svg.png" alt="">
+                <img src="{{asset('assets/img/icon/svg.png')}}" alt="">
             </div>
 
             <div class="ms-3 mb-0 small  border-bottom w-100">
@@ -18,7 +18,7 @@
     <div class=" text-muted m-2 p-3 bg-body rounded shadow-sm">
         <a href="./cilents.html" class="d-flex text-decoration-none">
             <div class="pr-3">
-                <img src="./img/icon/avatar-design.png" alt="">
+                <img src="{{asset('assets/img/icon/avatar-design.png')}}" alt="">
             </div>
 
             <div class="ms-3 mb-0 small  border-bottom w-100">
@@ -33,7 +33,7 @@
     <div class=" text-muted m-2 p-3 bg-body rounded shadow-sm">
         <a href="./finans.html" class="d-flex text-decoration-none">
             <div class="pr-3">
-                <img src="./img/icon/investing.png" alt="">
+                <img src="{{asset('assets/img/icon/investing.png')}}" alt="">
             </div>
 
             <div class="ms-3 mb-0 small  border-bottom w-100">
@@ -48,7 +48,7 @@
     <div class=" text-muted m-2 p-3 bg-body rounded shadow-sm">
         <a href="./debt.html" class="d-flex text-decoration-none">
             <div class="pr-3">
-                <img src="./img/icon/debt.png" alt="">
+                <img src="{{asset('assets/img/icon/debt.png')}}" alt="">
             </div>
 
             <div class="ms-3 mb-0 small  border-bottom w-100">
@@ -63,7 +63,7 @@
     <div class=" text-muted m-2 p-3 bg-body rounded shadow-sm">
         <a href="./expenses.html" class="d-flex text-decoration-none">
             <div class="pr-3">
-                <img src="./img/icon/settings.png" alt="">
+                <img src="{{asset('assets/img/icon/settings.png')}}" alt="">
             </div>
 
             <div class="ms-3 mb-0 small  border-bottom w-100">
@@ -78,7 +78,7 @@
     <div class=" text-muted m-2 p-3 bg-body rounded shadow-sm">
         <a href="./users.html" class="d-flex text-decoration-none">
             <div class="pr-3">
-                <img src="./img/icon/settings.png" alt="">
+                <img src="{{asset('assets/img/icon/settings.png')}}" alt="">
             </div>
 
             <div class="ms-3 mb-0 small  border-bottom w-100">
@@ -93,7 +93,7 @@
     <div class=" text-muted m-2 p-3 bg-body rounded shadow-sm">
         <a href="./sementa.html" class="d-flex text-decoration-none">
             <div class="pr-3">
-                <img src="./img/icon/settings.png" alt="">
+                <img src="{{asset('assets/img/icon/settings.png')}}" alt="">
             </div>
 
             <div class="ms-3 mb-0 small  border-bottom w-100">

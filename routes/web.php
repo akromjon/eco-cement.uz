@@ -1,15 +1,18 @@
 <?php
 
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
+use App\Livewire\Actions\Logout as LogOutAction;
 
-Route::view('/', 'welcome');
 
-Route::view('dashboard', 'dashboard')
-    ->middleware(['auth', 'verified'])
-    ->name('dashboard');
+Route::get('/', [HomeController::class, 'home'])->middleware("auth")->name('home'); // home page
+Route::get('/logout',function(){
 
-Route::view('profile', 'profile')
-    ->middleware(['auth'])
-    ->name('profile');
+    $logout=new   LogOutAction;
 
-require __DIR__.'/auth.php';
+    $logout();
+
+    return redirect()->back();
+});
+
+require __DIR__ . '/auth.php';
