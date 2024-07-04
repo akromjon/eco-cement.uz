@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use App\Models\Cement;
+use App\Models\Sale;
 use Livewire\Component;
 
 class CementCreation extends Component
@@ -19,7 +20,7 @@ class CementCreation extends Component
     }
     public function render()
     {
-        $cements = Cement::orderBy("id","desc")->paginate(20);
+        $cements = Cement::orderBy("id","desc")->get();
         return view('livewire.cement-creation', ["cements" => $cements]);
     }
 
@@ -39,6 +40,11 @@ class CementCreation extends Component
     {
         $cement = Cement::find($cement_id);
 
+        if($cement->sales()->count()>0){
+
+            return session()->flash('message', 'Sotuvda quydagi sement ishlatilingan!');
+        }
+
         $cement->delete();
 
         $this->render();
@@ -47,13 +53,16 @@ class CementCreation extends Component
     public function select(string $id)
     {
         $this->cement = Cement::find($id);
+
         $this->type = $this->cement->type;
     }
 
     public function edit()
     {
         $this->validate();
+
         $this->cement->update(["type" => $this->type]);
+
         return $this->redirect(route("cements.create"));
     }
 }

@@ -1,7 +1,7 @@
 <main>
     <!-- itme link  -->
     <div class=" text-muted m-2 p-3 bg-body rounded shadow-sm">
-        <a href="./sale.html" class="d-flex text-decoration-none">
+        <a href="{{route("sales.list")}}" class="d-flex text-decoration-none">
             <div class="pr-3">
                 <img src="{{asset('assets/img/icon/svg.png')}}" alt="">
             </div>

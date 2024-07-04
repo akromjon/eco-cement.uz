@@ -1,4 +1,9 @@
 <div>
+    @if (session()->has('message'))
+    <div class="alert alert-danger">
+        {{ session('message') }}
+    </div>
+    @endif
     <div class="d-flex mx-3">
         @include('components.return-back')
         <button type="button" class="btn btn-primary w-50 ms-1" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
@@ -24,8 +29,8 @@
                 <td>
                     <button wire:confirm="Rostanmi?" wire:click="delete({{$cement->id}})" type="button"
                         class="btn btn-outline-danger btn-sm">O'chirmoq</button>
-                    <button wire:click="select({{$cement->id}})" data-bs-toggle="modal" data-bs-target="#editCement"  type="button"
-                        class="btn btn-outline-info btn-sm">O'zgartirish</button>
+                    <button wire:click="select({{$cement->id}})" data-bs-toggle="modal" data-bs-target="#editCement"
+                        type="button" class="btn btn-outline-info btn-sm">O'zgartirish</button>
 
                 </td>
 
@@ -75,7 +80,8 @@
                 <div class="modal-body">
                     <form wire:submit="edit">
                         <div class="form-floating mb-2">
-                            <input type="text" value="{{$type}}" wire:model="type" class="form-control" id="floatingInput">
+                            <input type="text" value="{{$type}}" wire:model="type" class="form-control"
+                                id="floatingInput">
                             @error('type') <span class="alert alert-danger">{{ $message }}</span> @enderror
 
                             <label for="floatingInput">Sement</label>

@@ -17,7 +17,6 @@ class ClientCreation extends Component
         $rules = [
             "name" => "string|required|min:3|max:255",
             "phone_number" => "required|string|min:12|max:12|unique:clients,phone_number," . $this->phone_number
-            //unique:users,email,' . $this->userID
         ];
 
         if (!empty($this->client)) {
@@ -28,7 +27,7 @@ class ClientCreation extends Component
     }
     public function render()
     {
-        $clients = Client::orderBy("id","desc")->paginate(20);
+        $clients = Client::orderBy("id","desc")->get();
         return view('livewire.client-creation', ["clients" => $clients]);
     }
 
