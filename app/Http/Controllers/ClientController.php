@@ -11,7 +11,6 @@ class ClientController extends Controller
 {
     public function list(): View|Factory
     {
-
         $this->data->page_name = "Mijozlar";
 
         return view("pages.clients.list", ["data" => $this->data]);
@@ -23,4 +22,6 @@ class ClientController extends Controller
 
         return view("pages.clients.create", ["data" => $this->data]);
     }
+
+
 }

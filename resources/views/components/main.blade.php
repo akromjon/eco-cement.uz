@@ -16,7 +16,7 @@
 
     <!-- itme link  -->
     <div class=" text-muted m-2 p-3 bg-body rounded shadow-sm">
-        <a href="{{route('clients.list')}}" class="d-flex text-decoration-none">
+        <a href="{{route('orders.list')}}" class="d-flex text-decoration-none">
             <div class="pr-3">
                 <img src="{{asset('assets/img/icon/avatar-design.png')}}" alt="">
             </div>
@@ -61,7 +61,7 @@
 
     <!-- itme link  -->
     <div class=" text-muted m-2 p-3 bg-body rounded shadow-sm">
-        <a href="./expenses.html" class="d-flex text-decoration-none">
+        <a href="{{route('expenses.list')}}" class="d-flex text-decoration-none">
             <div class="pr-3">
                 <img src="{{asset('assets/img/icon/settings.png')}}" alt="">
             </div>

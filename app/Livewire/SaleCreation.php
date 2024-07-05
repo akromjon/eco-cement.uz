@@ -65,25 +65,20 @@ class SaleCreation extends Component
 
     public function select(string $sale_id)
     {
-        $this->sale = Sale::find($sale_id);
+        $sale = Sale::find($sale_id);
 
-        $sale = $this->sale;
+        if ($sale) {
 
-        $this->kg = $sale->kg;
+            $this->sale = $sale;
 
-        $this->client_id = $sale->client_id;
+            foreach (['kg', 'client_id', 'cement_id', 'car_number', 'get_amount', 'sell_amount'] as $property) {
+                $this->$property = $sale->$property;
+            }
 
-        $this->cement_id = $sale->cement_id;
+            $this->given_date = $sale->given_date->format('Y-m-d');
 
-        $this->given_date = $sale->given_date->format('Y-m-d');
-
-        $this->car_number = $sale->car_number;
-
-        $this->get_amount = $sale->get_amount;
-
-        $this->sell_amount = $sale->sell_amount;
-
-        $this->date_of_return = $sale->date_of_return->format('Y-m-d');
+            $this->date_of_return = $sale->date_of_return->format('Y-m-d');
+        }
     }
 
     public function edit()
@@ -93,6 +88,5 @@ class SaleCreation extends Component
         session()->flash('success_message', 'O\'zgartirildi!');
 
         return $this->redirect(route("sales.list"));
-
     }
 }

@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\CementController;
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\ExpenseController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\SaleController;
 use Illuminate\Support\Facades\Route;
 use App\Livewire\Actions\Logout as LogOutAction;
@@ -26,6 +28,15 @@ Route::prefix('/')->middleware("auth")->group(function () {
     Route::prefix("/sales")->group(function () {
         Route::get("/create", [SaleController::class, 'create'])->name('sales.create');
         Route::get("/list", [SaleController::class, 'list'])->name('sales.list');
+    });
+
+    Route::prefix("/expenses")->group(function () {
+        Route::get("/", [ExpenseController::class, 'list'])->name('expenses.list');
+    });
+
+    Route::prefix("/order")->group(function () {
+        Route::get("/", [OrderController::class, 'list'])->name('orders.list');
+        Route::get("/client/{id}", [OrderController::class, 'show'])->name('orders.show');
     });
 
     Route::get('/logout', function () {
