@@ -5,6 +5,7 @@ namespace App\Livewire;
 use App\Models\Cement;
 use App\Models\Client;
 use App\Models\Sale;
+use App\Models\Transaction;
 use Livewire\Component;
 
 class SaleCreation extends Component
@@ -49,7 +50,13 @@ class SaleCreation extends Component
     {
         $this->validate();
 
-        Sale::create($this->except('sale'));
+        $data=$this->except('sale');
+
+        $sale=Sale::create($data);
+
+        $data['sale_id']=$sale->id;
+
+        Transaction::pay($data);
 
         return $this->redirect(route("sales.list"));
     }

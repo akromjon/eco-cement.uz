@@ -12,6 +12,16 @@ class Client extends Model
 
     public function sales(): HasMany
     {
-        return $this->hasMany(Sale::class)->orderBy('id','DESC');
+        return $this->hasMany(Sale::class)->orderBy('id', 'DESC');
+    }
+
+    public function transactions(): HasMany
+    {
+        return $this->hasMany(Transaction::class);
+    }
+
+    public function payments(): HasMany
+    {
+        return $this->hasMany(Payment::class);
     }
 }

@@ -5,21 +5,21 @@ namespace App\Http\Controllers;
 use App\Models\Client;
 use Illuminate\Http\Request;
 
-class OrderController extends Controller
+class TransactionController extends Controller
 {
     public function list()
     {
         $this->data->page_name = "Zakazlar";
 
-        return view('pages.order.list', ['data' => $this->data]);
+        return view('pages.transaction.list', ['data' => $this->data]);
     }
 
     public function show($id)
     {
         $this->data->page_name = "Zakazlar";
 
-        $this->data->client=Client::find($id);
+        $this->data->client_id=$id;
 
-        return view('pages.order.show', ['data' => $this->data]);
+        return view('pages.transaction.show', ['data' => $this->data]);
     }
 }

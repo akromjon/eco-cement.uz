@@ -16,7 +16,7 @@
 
     <!-- itme link  -->
     <div class=" text-muted m-2 p-3 bg-body rounded shadow-sm">
-        <a href="{{route('orders.list')}}" class="d-flex text-decoration-none">
+        <a href="{{route('transactions.list')}}" class="d-flex text-decoration-none">
             <div class="pr-3">
                 <img src="{{asset('assets/img/icon/avatar-design.png')}}" alt="">
             </div>
@@ -31,7 +31,7 @@
 
     <!-- itme link  -->
     <div class=" text-muted m-2 p-3 bg-body rounded shadow-sm">
-        <a href="./finans.html" class="d-flex text-decoration-none">
+        <a href="{{route('finance.list')}}" class="d-flex text-decoration-none">
             <div class="pr-3">
                 <img src="{{asset('assets/img/icon/investing.png')}}" alt="">
             </div>
