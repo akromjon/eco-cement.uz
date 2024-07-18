@@ -49,5 +49,17 @@
             </div>
         </div>
 
+        <div class=" text-muted m-3 p-3 bg-body rounded shadow-sm">
+            <div class="ms-3 mb-0 small">
+                <div class="">
+                    <strong class="text-menu  name-cilent font-18">
+                        Haqdorlar
+                    </strong><br>
+                    <strong class="text-menu  font-20 minus">{{$depts->sum('balance')}}</strong>
+                </div>
+            </div>
+        </div>
+
+
     </main>
 </div>

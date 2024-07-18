@@ -18,7 +18,7 @@ class TransactionShow extends Component
         return [
             'amount' => 'required',
             'transaction_id' => 'required',
-            'comment' => 'nullable|string|min:3|max:255'
+            'comment' => 'required|string|min:3|max:255'
         ];
     }
     public function mount($client_id)

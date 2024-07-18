@@ -9,7 +9,15 @@
                 <span class="text-primary fw-bold m-font">{{$client->payments->sum('amount')}}</span>
             </div>
             <div class="alert alert-dark p-1 w-100 text-center mx-1" role="alert">
-                <span class="text-dark fw-bold m-font">{{$client->transactions->sum('balance')}}</span>
+                <span class="text-dark fw-bold m-font">
+                    @if($client->transactions->sum('dept') > 0)
+                        {{"-".$client->transactions->sum('dept')}}
+                    @elseif($client->transactions->sum('balance') > 0)
+                        {{ $client->transactions->sum('balance') }}
+                    @elseif($client->transactions->sum('dept')==0 && $client->transactions->sum('balance')==0)
+                        0
+                    @endif
+                </span>
             </div>
         </div>
 

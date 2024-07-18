@@ -9,8 +9,8 @@ class OrderCreation extends Component
 {
     public function render()
     {
-        $orders = Client::whereHas('sales')->get();
+        $clients = Client::whereHas('sales')->get();
 
-        return view('livewire.order-creation', ['orders' => $orders]);
+        return view('livewire.order-creation', ['clients' => $clients]);
     }
 }
