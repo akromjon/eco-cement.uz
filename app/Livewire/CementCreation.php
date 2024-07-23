@@ -21,6 +21,7 @@ class CementCreation extends Component
     public function render()
     {
         $cements = Cement::orderBy("id","desc")->get();
+
         return view('livewire.cement-creation', ["cements" => $cements]);
     }
 

@@ -12,16 +12,16 @@ class Finance extends Component
     public string $period = "year";
     public function render()
     {
-        $payments = Payment::query();
+        $incomes = Transaction::query();
 
-        $payments = match ($this->period) {
-            'year' => $payments->whereYear('created_at', now()->year),
-            'month' => $payments->whereYear('created_at', now()->year)->whereMonth('created_at', now()->month),
-            'week' => $payments->whereBetween('created_at', [now()->startOfWeek(), now()->endOfWeek()]),
-            default => $payments,
+        $incomes = match ($this->period) {
+            'year' => $incomes->whereYear('created_at', now()->year),
+            'month' => $incomes->whereYear('created_at', now()->year)->whereMonth('created_at', now()->month),
+            'week' => $incomes->whereBetween('created_at', [now()->startOfWeek(), now()->endOfWeek()]),
+            default => $incomes,
         };
 
-        $payments = $payments->get();
+        $incomes = $incomes->get();
 
 
         $expenses = Expense::query();
@@ -66,7 +66,7 @@ class Finance extends Component
 
         $transactions_with_depts = $transactions_with_depts->get();
 
-        return view('livewire.finance', ['payments' => $payments, 'expenses' => $expenses, 'transactions' => $transactions,'depts' => $transactions_with_depts]);
+        return view('livewire.finance', ['incomes' => $incomes, 'expenses' => $expenses, 'transactions' => $transactions,'depts' => $transactions_with_depts]);
     }
 
     public function change($period)

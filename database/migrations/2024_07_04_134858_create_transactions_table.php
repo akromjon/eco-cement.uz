@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('client_id');
             $table->unsignedBigInteger('sale_id');
+            $table->float('income_amount',8);
             $table->float('amount',8);
             $table->float('dept',8)->default(0);
             $table->float('balance',8)->default(0);

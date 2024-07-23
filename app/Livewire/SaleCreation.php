@@ -50,11 +50,11 @@ class SaleCreation extends Component
     {
         $this->validate();
 
-        $data=$this->except('sale');
+        $data = $this->except('sale');
 
-        $sale=Sale::create($data);
+        $sale = Sale::create($data);
 
-        $data['sale_id']=$sale->id;
+        $data['sale_id'] = $sale->id;
 
         Transaction::pay($data);
 
@@ -64,6 +64,12 @@ class SaleCreation extends Component
     public function delete(string $sale_id)
     {
         $sale = Sale::find($sale_id);
+
+        $transactions = $sale->transactions;
+
+        foreach ($transactions as $transaction) {
+            $transaction->delete();
+        }
 
         $sale->delete();
 
@@ -90,7 +96,13 @@ class SaleCreation extends Component
 
     public function edit()
     {
-        $this->sale->update($this->except('sale'));
+        $data = $this->except('sale');
+
+        $this->sale->update($data);
+
+        $data['sale_id']=$this->sale->id;
+
+        Transaction::editPay($data);
 
         session()->flash('success_message', 'O\'zgartirildi!');
 

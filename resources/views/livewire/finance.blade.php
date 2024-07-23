@@ -22,7 +22,7 @@
                     <strong class="text-menu  name-cilent font-18">
                         Sof Foyda
                     </strong><br>
-                    <strong class="text-menu  font-20 minus">{{$payments->sum('amount')}} so'm</strong>
+                    <strong class="text-menu  font-20 minus">{{$incomes->sum('income_amount')}} so'm</strong>
                 </div>
             </div>
         </div>

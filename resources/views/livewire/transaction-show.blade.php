@@ -82,7 +82,7 @@
 
                     <div class="d-flex my-3 mx-1 p-3 bg-body rounded shadow-sm list-product">
                         <div class="list-product-left w-50">
-                            <div class="sana">02.06.2024</div>
+                            <div class="sana">{{$payment->created_at->format('d.m.y')}}</div>
                             <div class="car">{{$payment->comment}}</div>
                         </div>
                         <div class="list-product-right text-end w-50">
